@@ -20,6 +20,7 @@
             <input id="barra-de-pesquisa" onkeyup="pesquisar()" type="text" placeholder=" Pesquisar">
         </div>
     </div>
+    <i class=""></i>
     <!--Carousel-->
     <div class="container" id="publicidade">
         <div id="myCarousel" class="carousel slide carousel-fade mb-5" data-bs-ride="carousel">
@@ -66,7 +67,7 @@
         <div class="row row-cols-2 row-cols-md-3 g-4">
             <div class="col">
               <div class="card h-100 produto">
-                <img src="https://img.itdg.com.br/tdg/images/blog/uploads/2017/08/shutterstock_236724370.jpg" style="height: 140px;" class="card-img-top" >
+                <img  class="card-img-top" id="img1" >
                 <div class="card-body">
                   <h5 class="card-title" style="color:white ;">Expresso</h5>
                   <p class="card-text">Café Moído</p>
@@ -78,7 +79,7 @@
             </div>
             <div class="col">
                 <div class="card h-100 produto">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Latte_art_3.jpg" style="height: 140px;" class="card-img-top" >
+                  <img   class="card-img-top" id="img2" >
                   <div class="card-body">
                     <h5 class="card-title" style="color:white ;">Latte</h5>
                     <p class="card-text">Baunilha</p>
@@ -90,6 +91,33 @@
               </div>
           </div>
     </div>
+
+
+    <!--footer-->
+    <nav class="navbar navbar-expand-lg fixed-bottom navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <!--Scripts aqui maltinha-->
     <script src="../lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/home.js"></script>

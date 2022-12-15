@@ -96,3 +96,11 @@ body {
     border-radius: 50%;
     display: inline-block;
   }
+
+.card-img-top {height: 140px; background-position: center center; background-repeat: no-repeat; background-size: cover; }
+#img1 { 
+                background-image: url('https://img.itdg.com.br/tdg/images/blog/uploads/2017/08/shutterstock_236724370.jpg'); }
+#img2 {
+                background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c6/Latte_art_3.jpg');
+            }
+            
