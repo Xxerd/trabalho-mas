@@ -1,132 +1,137 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Coffee-Break home</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
-    <link href="../lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="../lib/font-awesome/dist/css/fontawesome.min.css" rel="stylesheet" />
-    <link href="../lib/font-awesome/dist/css/solid.min.css" rel="stylesheet" />
-    <link href="../lib/font-awesome/dist/css/brands.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/home.css" />
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Coffee-Break home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+  <link href="../lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../lib/font-awesome/dist/css/fontawesome.min.css" rel="stylesheet" />
+  <link href="../lib/font-awesome/dist/css/solid.min.css" rel="stylesheet" />
+  <link href="../lib/font-awesome/dist/css/brands.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/home.css" />
 </head>
+
 <body>
-    <!--Banner-->
-    <div class="container">
-        <div class="banner">
-            <h1 class="titulo">Home</h1>
-            <input id="barra-de-pesquisa" onkeyup="pesquisar()" type="text" placeholder=" Pesquisar">
-        </div>
+  <!--Banner-->
+  <div class="container">
+    <div class="banner">
+      <h1 class="titulo">Home</h1>
+      <input id="barra-de-pesquisa" onkeyup="pesquisar()" type="text" placeholder=" Pesquisar">
     </div>
-    <i class=""></i>
-    <!--Carousel-->
-    <div class="container" id="publicidade">
-        <div id="myCarousel" class="carousel slide carousel-fade mb-5" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" aria-label="Slide 1" class="active" aria-current="true"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 2"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                </div>
-                <div class="carousel-item">
-                </div>
-                <div class="carousel-item">
-                </div>    
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+  </div>
+  <i class=""></i>
+  <!--Carousel-->
+  <div class="container" id="publicidade">
+    <div id="myCarousel" class="carousel slide carousel-fade mb-5" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" aria-label="Slide 1" class="active"
+          aria-current="true"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 2"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
         </div>
-    </div>
-    <!--Nav produtos-->
-    <div class="container" id="categoria">
-        <ul class="nav nav-pills nav-fill">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">café</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link deactive" href="#">chá</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link deactive" href="#">outros</a>
-            </li>
-          </ul>
+        <div class="carousel-item">
         </div>
+        <div class="carousel-item">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <!--produtos-->
-    <div class="container" id="produtos">
-        <div class="row row-cols-2 row-cols-md-3 g-4">
-            <div class="col">
-              <div class="card h-100 produto">
-                <img  class="card-img-top" id="img1" >
-                <div class="card-body">
-                  <h5 class="card-title" style="color:white ;">Expresso</h5>
-                  <p class="card-text">Café Moído</p>
-                </div>
-                <div class="card-footer">
-                  <p1 class="text-muted">3.00$</p1><button type="button"><i class="fa-plus"></i></button>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-                <div class="card h-100 produto">
-                  <img   class="card-img-top" id="img2" >
-                  <div class="card-body">
-                    <h5 class="card-title" style="color:white ;">Latte</h5>
-                    <p class="card-text">Baunilha</p>
-                  </div>
-                  <div class="card-footer">
-                    <p1 class="text-muted">2.75$</p1><button type="button"><i class="fa-plus"></i></button>
-                  </div>
-                </div>
-             </div>
-             <div class="col">
-              <div class="card h-100 produto">
-                <img   class="card-img-top" id="img2" >
-                <div class="card-body">
-                  <h5 class="card-title" style="color:white ;">Latte</h5>
-                  <p class="card-text">Baunilha</p>
-                </div>
-                <div class="card-footer">
-                  <p1 class="text-muted">2.75$</p1><button type="button"><i class="fa-plus"></i></button>
-                </div>
-              </div>
-           </div>
+  </div>
+  <!--Nav produtos-->
+  <div class="container" id="categoria">
+    <ul class="nav nav-pills nav-fill">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">café</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link deactive" href="#">chá</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link deactive" href="#">outros</a>
+      </li>
+    </ul>
+  </div>
+  </div>
+  <!--produtos-->
+  <div class="container" id="produtos">
+    <div class="row row-cols-2 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100 produto">
+          <img class="card-img-top" id="img1">
+          <div class="card-body">
+            <h5 class="card-title" style="color:white ;">Expresso</h5>
+            <p class="card-text">Café Moído</p>
           </div>
+          <div class="card-footer">
+            <p1 class="text-muted">3.00$</p1><button type="button"><i class="fa-plus"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 produto">
+          <img class="card-img-top" id="img2">
+          <div class="card-body">
+            <h5 class="card-title" style="color:white ;">Latte</h5>
+            <p class="card-text">Baunilha</p>
+          </div>
+          <div class="card-footer">
+            <p1 class="text-muted">2.75$</p1><button type="button"><i class="fa-plus"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 produto">
+          <img class="card-img-top" id="img2">
+          <div class="card-body">
+            <h5 class="card-title" style="color:white ;">Latte</h5>
+            <p class="card-text">Baunilha</p>
+          </div>
+          <div class="card-footer">
+            <p1 class="text-muted">2.75$</p1><button type="button"><i class="fa-plus"></i></button>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
 
-    <!--footer-->
-    <div class="container" >
-      <ul class="nav nav-pills nav-fill fixed-bottom" id="footer">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-house"></i></a>
-        </li>
-        <li class="nav-item"> 
-          <a class="nav-link" href="#"><i class="fas fa-shopping-basket"></i></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fas fa-truck"></i></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><i class="far fa-user"></i></a>
-        </li>
-      </ul>
-    </div>
-    <!--Scripts aqui maltinha-->
-    <script src="../lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/home.js"></script>
-    <script src="../lib/jquery/dist/jquery.min.js"></script>
+  <!--footer-->
+  <div class="container">
+    <ul class="nav nav-pills nav-fill fixed-bottom" id="footer">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-house"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fas fa-shopping-basket"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fas fa-truck"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="far fa-user"></i></a>
+      </li>
+    </ul>
+  </div>
+  <!--Scripts aqui maltinha-->
+  <script src="../lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/home.js"></script>
+  <script src="../lib/jquery/dist/jquery.js"></script>
+
 </body>
+
 </html>

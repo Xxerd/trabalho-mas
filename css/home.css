@@ -1,21 +1,23 @@
-body, #footer {
+body,
+#footer {
     background-color: #FFF4EA;
 }
 
 .banner {
-    background-color:#41403F;
+    background-color: #41403F;
     border-radius: 6px;
     height: 150px;
     margin-top: 10px;
     text-align: center;
-    
+
 
 }
+
 .banner input[type=text] {
     align-content: center;
     border: none;
     font-size: 17px;
-    background-color:#FFF3E9;
+    background-color: #FFF3E9;
     margin-bottom: 0px;
     border-radius: 10px;
     width: 90%;
@@ -23,7 +25,7 @@ body, #footer {
     height: 20%;
 
 
-  }
+}
 
 .titulo {
     text-align: center;
@@ -31,76 +33,102 @@ body, #footer {
     color: #FFFFFF;
     padding-top: 25px;
 }
+
 #publicidade {
     margin-top: 10px;
     height: 300px;
 
 }
 
-.carousel-item { z-index: -100; height: 300px; background-position: center center; background-repeat: no-repeat; background-size: cover; border-radius: 10px; }
-            .carousel-item:nth-child(1) { 
-                background-image: url('http://www.radiofm104.com.br/images/promocoes/bkcafedamanha1041.jpg'); }
-            .carousel-item:nth-child(2) {
-                background-image: url('https://1.bp.blogspot.com/-jY5bP9tMDvY/XwJJrnwsOzI/AAAAAAAAte0/es-e7UnUXY0Ck9m1M0QcSCgv9UjZxcxXQCLcBGAsYHQ/s1600/Promo%25C3%25A7%25C3%25A3o%2BCaf%25C3%25A9%2BPacaembu%2B2020%2BLigando%2BPessoas%2B%2B%2B-%2BIphones%2B11%2Be%2BSmartphones.jpg');
-            }
-            .carousel-item:nth-child(3) {
-                background-image: url('https://rededapromocao.com.br/wp-content/uploads/2022/06/promomcao-3-coracoes-2022.jpg');
-            }
+.carousel-item {
+    z-index: -100;
+    height: 300px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.carousel-item:nth-child(1) {
+    background-image: url('http://www.radiofm104.com.br/images/promocoes/bkcafedamanha1041.jpg');
+}
+
+.carousel-item:nth-child(2) {
+    background-image: url('https://1.bp.blogspot.com/-jY5bP9tMDvY/XwJJrnwsOzI/AAAAAAAAte0/es-e7UnUXY0Ck9m1M0QcSCgv9UjZxcxXQCLcBGAsYHQ/s1600/Promo%25C3%25A7%25C3%25A3o%2BCaf%25C3%25A9%2BPacaembu%2B2020%2BLigando%2BPessoas%2B%2B%2B-%2BIphones%2B11%2Be%2BSmartphones.jpg');
+}
+
+.carousel-item:nth-child(3) {
+    background-image: url('https://rededapromocao.com.br/wp-content/uploads/2022/06/promomcao-3-coracoes-2022.jpg');
+}
 
 
 
 .nav-item .active {
     background-color: #41403F !important;
     width: 80% !important;
-    margin: auto!important;
+    margin: auto !important;
 }
 
 .nav-item .deactive {
-    background-color: #FFF3E9 ;
-    border-color: #41403F!important;
-    border:1px solid;
+    background-color: #FFF3E9;
+    border-color: #41403F !important;
+    border: 1px solid;
     color: black !important;
     width: 80% !important;
-    margin: auto!important;
+    margin: auto !important;
 
 }
 
 .nav-item {
-    text-align: center!important;
+    text-align: center !important;
 }
 
-#produtos, #categoria, #footer {
+#produtos,
+#categoria,
+#footer {
     margin-top: 10px;
 }
 
 .adicionar-produto {
-    border:#FFFFFF!important;
+    border: #FFFFFF !important;
     float: right;
     width: 10px;
 
 }
-.card-footer button{
-    float:right; 
-    border:none;
+
+.card-footer button {
+    float: right;
+    border: none;
 }
+
 .card-body {
     background-color: #BEB6AE;
 
 }
+
 .dot {
     height: 5px;
     width: 5px;
     background-color: rgb(0, 0, 0);
     border-radius: 50%;
     display: inline-block;
-  }
+}
 
-.card-img-top {height: 140px; background-position: center center; background-repeat: no-repeat; background-size: cover; }
-#img1 { 
-                background-image: url('https://img.itdg.com.br/tdg/images/blog/uploads/2017/08/shutterstock_236724370.jpg'); }
+.card-img-top {
+    height: 140px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#img1 {
+    background-image: url('https://img.itdg.com.br/tdg/images/blog/uploads/2017/08/shutterstock_236724370.jpg');
+}
+
 #img2 {
-                background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c6/Latte_art_3.jpg');
-            }
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c6/Latte_art_3.jpg');
+}
+
 .nav-link {
     color: #41403F;
 }

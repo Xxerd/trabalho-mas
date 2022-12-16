@@ -4,14 +4,14 @@ function pesquisar() {
     let produtos = $(".card-title");
     console.log(produtos)
 
-    for (i = 0; i < produtos.length; i++) { 
+    for (i = 0; i < produtos.length; i++) {
         if (!produtos[i].innerHTML.toLowerCase().includes(input)) {
-            $(produtos[i]).parent().parent().hide();
-          
+            $(produtos[i]).parent().parent().parent().hide();
+
         }
         else {
-            $(produtos[i]).parent().parent().show();                 
+            $(produtos[i]).parent().parent().parent().show().css({ "Float": "left" });
         }
     }
-    
+
 }
