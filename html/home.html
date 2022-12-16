@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
     <link href="../lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../lib/font-awesome/dist/css/fontawesome.min.css" rel="stylesheet" />
+    <link href="../lib/font-awesome/dist/css/solid.min.css" rel="stylesheet" />
+    <link href="../lib/font-awesome/dist/css/brands.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/home.css" />
 </head>
 <body>
@@ -48,7 +50,7 @@
         </div>
     </div>
     <!--Nav produtos-->
-    <div class="container" id="produtos">
+    <div class="container" id="categoria">
         <ul class="nav nav-pills nav-fill">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">café</a>
@@ -88,36 +90,40 @@
                     <p1 class="text-muted">2.75$</p1><button type="button"><i class="fa-plus"></i></button>
                   </div>
                 </div>
+             </div>
+             <div class="col">
+              <div class="card h-100 produto">
+                <img   class="card-img-top" id="img2" >
+                <div class="card-body">
+                  <h5 class="card-title" style="color:white ;">Latte</h5>
+                  <p class="card-text">Baunilha</p>
+                </div>
+                <div class="card-footer">
+                  <p1 class="text-muted">2.75$</p1><button type="button"><i class="fa-plus"></i></button>
+                </div>
               </div>
+           </div>
           </div>
     </div>
 
 
     <!--footer-->
-    <nav class="navbar navbar-expand-lg fixed-bottom navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <div class="container" >
+      <ul class="nav nav-pills nav-fill fixed-bottom" id="footer">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-house"></i></a>
+        </li>
+        <li class="nav-item"> 
+          <a class="nav-link" href="#"><i class="fas fa-shopping-basket"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fas fa-truck"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="far fa-user"></i></a>
+        </li>
+      </ul>
+    </div>
     <!--Scripts aqui maltinha-->
     <script src="../lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/home.js"></script>

@@ -1,4 +1,4 @@
-body {
+body, #footer {
     background-color: #FFF4EA;
 }
 
@@ -47,9 +47,7 @@ body {
                 background-image: url('https://rededapromocao.com.br/wp-content/uploads/2022/06/promomcao-3-coracoes-2022.jpg');
             }
 
-#produtos {
-    margin-top: 20px;
-}
+
 
 .nav-item .active {
     background-color: #41403F !important;
@@ -71,7 +69,7 @@ body {
     text-align: center!important;
 }
 
-#produtos {
+#produtos, #categoria, #footer {
     margin-top: 10px;
 }
 
@@ -103,4 +101,6 @@ body {
 #img2 {
                 background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c6/Latte_art_3.jpg');
             }
-            
+.nav-link {
+    color: #41403F;
+}
