@@ -15,3 +15,20 @@ function pesquisar() {
     }
 
 }
+
+var id;
+
+function highlight() {
+    id = $("#footer").find(".active").attr("id")
+    $("#" + id).removeClass("active")
+    $("#carrinho").addClass("active")
+    return id
+}
+function dehighlight() {
+    $("#carrinho").removeClass("active")
+    $("#" + id).addClass("active")
+}
+
+function redirecionar() {
+    location.href = 'checkout.html'
+}

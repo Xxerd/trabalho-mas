@@ -67,6 +67,7 @@
     </ul>
   </div>
   </div>
+
   <!--produtos-->
   <div class="container" id="produtos">
     <div class="row row-cols-2 row-cols-md-3 g-4">
@@ -78,7 +79,8 @@
             <p class="card-text">Café Moído</p>
           </div>
           <div class="card-footer">
-            <p1 class="text-muted">3.00$</p1><button type="button"><i class="fa-plus"></i></button>
+            <p1 class="text-muted">3.00$</p1><button type="button" class="add-to-cart" data-name="Expresso"
+              data-price="3.00"><i class="fa-plus"></i></button>
           </div>
         </div>
       </div>
@@ -90,7 +92,9 @@
             <p class="card-text">Baunilha</p>
           </div>
           <div class="card-footer">
-            <p1 class="text-muted">2.75$</p1><button type="button"><i class="fa-plus"></i></button>
+            <p1 class="text-muted">2.75$</p1><button type="button" class="add-to-cart" data-name="Latte"
+              data-price="2.75"><i class="fa-plus"></i></button>
+
           </div>
         </div>
       </div>
@@ -102,7 +106,8 @@
             <p class="card-text">Baunilha</p>
           </div>
           <div class="card-footer">
-            <p1 class="text-muted">2.75$</p1><button type="button"><i class="fa-plus"></i></button>
+            <p1 class="text-muted">2.75$</p1><button type="button" class="add-to-cart" data-name="Latte"
+              data-price="2.75"><i class="fa-plus"></i></button>
           </div>
         </div>
       </div>
@@ -110,27 +115,64 @@
   </div>
 
 
+
+
+
+
+
+  <div style="height:45px ;"></div>
+
+
   <!--footer-->
   <div class="container">
     <ul class="nav nav-pills nav-fill fixed-bottom" id="footer">
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-house"></i></a>
+        <a class="nav-link active" id="1" aria-current="page" href="#"><i class="fa-solid fa-house"></i></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fas fa-shopping-basket"></i></a>
+        <a class="nav-link" id="carrinho" onclick="highlight()" data-bs-toggle="modal" data-bs-target="#cart"
+          href="#"><i class="fa-solid fas fa-shopping-basket"></i> (<span class="total-count"></span>)</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fas fa-truck"></i></a>
+        <a class="nav-link" id="2" href="#"><i class="fas fa-truck"></i></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><i class="far fa-user"></i></a>
+        <a class="nav-link" id="3" href="#"><i class="far fa-user"></i></a>
       </li>
     </ul>
   </div>
+  <!--modal-->
+  <div class="modal fade" id="cart" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel" style="color: white;">Carinho</h5>
+          <button type="button" class="btn-close" onclick="dehighlight()" data-bs-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <table class="show-cart table">
+          </table>
+          <div>Preço Entrega: 0.20€</div>
+          <div>Preço Produtos: <span class="total-cart"></span>€</div>
+          <div>Preço Total: <span class="total-cart-entrega"></span>€</div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" onclick="dehighlight()" class="btn btn-secondary"
+            data-bs-dismiss="modal">Fechar</button>
+          <button type="button" href="checkout.html" onclick="redirecionar()" class="btn btn-primary">Encomendar
+            agora</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!--Scripts aqui maltinha-->
   <script src="../lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../js/home.js"></script>
   <script src="../lib/jquery/dist/jquery.js"></script>
+  <script src="../js/cesto.js"></script>
 
 </body>
 
