@@ -2,16 +2,16 @@
 function validate() {
   var retVal = true;
   retVal1 = validateNome()
-  retVal2 = validateMorada()
+
   retVal3 = validatePasse();
   retVal4 = validateEmail();
   retVal5 = validateTelemovel();
-  if (retVal1 && retVal2 && retVal3 && retVal4 && retVal5) {
+  if (retVal1 && retVal3 && retVal4 && retVal5) {
     continuar()
   }
 
 
-  return retVal1 && retVal2 && retVal3 && retVal4 && retVal5;
+  return retVal1 && retVal3 && retVal4 && retVal5;
 }
 
 function validateNome() {
@@ -40,18 +40,7 @@ function validateTelemovel() {
   }
 }
 
-function validateMorada() {
-  morada = document.getElementById("Morada").value.trim().split(" ");
-  if (morada.length < 2) {
-    document.getElementById("MoradaError").classList.remove("d-none");
-    return false;
-  } else {
-    if (!document.getElementById("MoradaError").classList.contains("d-none")) {
-      document.getElementById("MoradaError").classList.add("d-none");
-    }
-    return true
-  }
-}
+
 
 function validateEmail() {
   email = document.getElementById("Email").value;
