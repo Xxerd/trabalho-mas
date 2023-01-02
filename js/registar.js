@@ -7,7 +7,7 @@ function validate() {
   retVal4 = validateEmail();
   retVal5 = validateTelemovel();
   if (retVal1 && retVal3 && retVal4 && retVal5) {
-    continuar()
+    location.href = "home.html";
   }
 
 
@@ -66,10 +66,4 @@ function validatePasse() {
     }
     return true
   }
-}
-
-
-function continuar() {
-  document.getElementById("continuar").classList.remove("d-none")
-  document.getElementById("registar").classList.add("d-none")
 }
