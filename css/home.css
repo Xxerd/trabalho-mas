@@ -130,6 +130,69 @@ body,
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c6/Latte_art_3.jpg');
 }
 
+#img3 {
+    background-image: url('https://www.receiteria.com.br/wp-content/uploads/receitas-de-cappuccino-4.jpg');
+}
+
+#img4 {
+    background-image: url('https://reviewcafe.com.br/wp-content/uploads/2020/08/mocaccino-1024x684.webp');
+}
+
+#img5 {
+    background-image: url('https://cdn.buttercms.com/AB7ud4YSE6nmOX0iGlgA');
+}
+
+#img6 {
+    background-image: url('https://www.simplyhappyfoodie.com/wp-content/uploads/2018/10/classic-irish-coffee-recipe-2.jpg');
+}
+
+
+
+
+#img-chá-1 {
+    background-image: url('https://www.plastprime.com/wp-content/uploads/2021/10/img01-1.png');
+}
+
+#img-chá-2 {
+    background-image: url('https://www.plastprime.com/wp-content/uploads/2021/10/img02.png');
+}
+
+#img-chá-3 {
+    background-image: url('https://www.plastprime.com/wp-content/uploads/2021/10/img04.png');
+}
+
+#img-chá-4 {
+    background-image: url('https://www.plastprime.com/wp-content/uploads/2021/10/img05.png');
+}
+
+#img-chá-5 {
+    background-image: url('https://www.plastprime.com/wp-content/uploads/2021/10/img06.png');
+}
+
+#img-chá-6 {
+    background-image: url('https://www.plastprime.com/wp-content/uploads/2021/10/img07.png');
+}
+
+
+
+
+#img-outros-1 {
+    background-image: url('https://media-cdn.tripadvisor.com/media/photo-s/10/b3/8e/0a/torrada-a-flores.jpg');
+}
+
+#img-outros-2 {
+    background-image: url('https://www.iguaria.com/wp-content/uploads/2016/03/Iguaria_Tosta-de-Bacon-Queijo-Fiambre-700x528.jpg');
+}
+
+#img-outros-3 {
+    background-image: url('https://cdn.vidaativa.pt/uploads/2019/11/queque-chocolate-850x514.jpg');
+}
+
+#img-outros-4 {
+    background-image: url('https://www.pingodoce.pt/wp-content/uploads/2015/10/pastel-de-nata.jpg');
+}
+
+
 .nav-link,
 .nav-link:focus {
     color: #41403F;
