@@ -1,27 +1,157 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
   <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Coffee-Break checkout</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
   <link href="../lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="../lib/font-awesome/dist/css/fontawesome.min.css" rel="stylesheet" />
   <link href="../lib/font-awesome/dist/css/solid.min.css" rel="stylesheet" />
   <link href="../lib/font-awesome/dist/css/brands.min.css" rel="stylesheet" />
-
+  <link rel="stylesheet" href="../css/checkout.css" />
+  <link rel="stylesheet" href="../lib/leaflet/leaflet.css" />
+  <style>
+    .dot {
+      height: 5px;
+      width: 5px;
+      background-color: rgb(0, 0, 0);
+      border-radius: 50%;
+      display: inline-block;
+    }
+  </style>
 </head>
-<p>checkout</p>
 
 <body>
+  <div class="container" style="background-color: #aa7400; width: 100%">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #aa7400">
+      <div class="container-fluid">
+        <ul class="navbar-nav d-flex flex-row">
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" href="home.html">
+              <i class="fas fa-coffee"></i>
+            </a>
+          </li>
+          <li style="margin-top: 6px; width: 100%">
+            <a class="" style="color: black; text-decoration:none">Coffee-Break Delivery </a>
+          </li>
+
+        </ul>
+        <ul class="navbar-nav d-flex flex-row">
+          <li class="nav-item me-3 me-lg-0" style="margin-top: px; width: 100%">
+            <a href="index.html" style="color: black; text-decoration:none">Log-out</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div style="height:48px"></div>
+  <!--Banner-->
+  <div class="container">
+    <div class="banner">
+      <h1 class="titulo"><a href="home.html" style="float: left; background-color: #41403F; margin-left: 5px;"><i
+            class="fas fa-arrow-left" style="color:#FFFFFF;margin-right:0px"></i></a>Produtos</h1>
+    </div>
+
+    <div class="main " style="margin-top: 20px; align-content: center;">
+      <div class="d-flex justify-content-center">
+        <h3>Detalhes do Pagamento</h3>
+      </div>
+      <div style="height:20px"></div>
+      <div class="d-flex justify-content-center">
+        <form>
+          <label for="radio1">Cartão de Débito </label>
+          <input style="margin-left: 10px;margin-top:5px" type="radio" id="radio1" name="radioGroup" value="option1"
+            checked>
+          <br>
+          <label style="margin-left: 40px; margin-right:10px;" for="radio2">Paypal </label>
+          <input style="margin-top:5px;" type="radio" id="radio2" name="radioGroup" value="option2">
+        </form>
+      </div>
+      <div style="height:20px"></div>
+      <div class="d-flex justify-content-center">
+        <label for="Card"><i style="margin-top: 20px;margin-right:15px;margin-left:11px"
+            class="far fa-credit-card"></i></label>
+        <input placeholder="+ Adicionar Novo Cartão" type="text" class="btn btn-outline-dark" id="Card" value="">
+      </div>
+    </div>
+    <br />
+    <div class="d-flex justify-content-center">
+      <span class="dot" style="margin-top:14px"></span><span style="width: 20px;"></span><span class="dot"
+        style="margin-top:14px"></span><span style="width: 20px;"></span><span class="dot"
+        style="margin-top:14px"></span><span style="width: 20px;"></span><a style="color:black;margin-top:8px"
+        class="fa fa-coffee"></a> <span style="width: 20px;"></span><span class="dot"
+        style="margin-top:14px"></span><span style="width: 20px;"></span><span class="dot"
+        style="margin-top:14px"></span><span style="width: 20px;"></span><span class="dot"
+        style="margin-top:14px"></span>
+    </div>
+    <div style="height:15px"></div>
+    <div class="d-flex justify-content-center">
+
+      <h3>Informações sobre a Entrega</h3>
+    </div>
+    <div style="height:10px"></div>
+    <div class="main  d-flex justify-content-center">
+
+      <button style="margin-left:7 px;" type="button" class="btn btn-white" data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop" id="modaltogller">
+        <i class="far fa-map" style="margin-right:6 px;color:black"></i>
+      </button>
+
+
+      <input class="btn btn-outline-dark" type="text" id="morada" value="">
+
+    </div>
+  </div>
+  <!--footer-->
+  <nav class="navbar fixed-bottom bg-body-tertiary" style="background-color: #41403F; height:150px">
+    <h3 style="color: #FFFFFF;margin-left:10%">Total:</h3>
+    <p style="float:right;color:white;margin-right:10%;margin-top:9px" id="preço"></p>
+    <div class="container-fluid">
+
+
+
+
+      <button type="button" class="btn btn-dark btn-square-md"
+        style="color: #FFFFFF;background-color: #222121;width:90%;margin-left:5%;margin-bottom:10px"
+        onclick="location.href='final.html';">Pagar</button>
+    </div>
+  </nav>
+
+
+
+  <!-- Modal Mapa -->
+  <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" style="height: 400px;">
+          <div id="map" style="margin: auto"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Understood</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
 
   <!--Scripts aqui maltinha-->
   <script src="../lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../lib/jquery/dist/jquery.min.js"></script>
+  <script src="../lib/jquery/dist/jquery.js"></script>
+  <script src="../js/checkout.js"></script>
+  <script src="../lib/leaflet/leaflet.js"></script>
 
 </body>
 

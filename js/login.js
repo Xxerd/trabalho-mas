@@ -1,41 +1,36 @@
 function login() {
     var retVal = true;
-    retVal1 = validateNome()
-    retVal2 = validatePasse()
-    if (retVal1 && retVal2) {
-        continuar()
-    }
-
-
-    return retVal1 && retVal2;
-
-}
-function validateNome() {
-    nome = document.getElementById("Nome").value;
-    if (nome !== "José Gomes") {
-        document.getElementById("loginError").classList.remove("d-none");
-        return false;
-    } else {
-        if (!document.getElementById("loginError").classList.contains("d-none")) {
-            document.getElementById("loginError").classList.add("d-none");
+    var data = JSON.parse(localStorage.getItem('userData'))
+    var login_name = $('#Nome').val();
+    var login_pass = $('#Passe').val()
+    const names = data.map(user => user.username);
+    const passes = data.map(user => user.password)
+    console.log(names)
+    console.log(passes)
+    console.log()
+    for (let i = 0; i <= names.length; i++) {
+        if (login_name === names[i]) {
+            if (login_pass === passes[i]) {
+                const user_atual = data.filter(user => user.username === login_name && user.password === login_pass);
+                localStorage.setItem('userLoged', JSON.stringify(user_atual))
+                console.log('atual: ' + user_atual)
+                location.href = "home.html"
+            }
         }
-        return true
-    }
-}
-function validatePasse() {
-    passe = document.getElementById("Passe").value;
-    console.log(passe)
-    if (passe != "Tipofixe") {
-        document.getElementById("loginError").classList.remove("d-none");
-        return false;
-    } else {
-        if (!document.getElementById("loginError").classList.contains("d-none")) {
-            document.getElementById("loginError").classList.add("d-none");
+
+        if (document.getElementById("loginError").classList.contains("d-none")) {
+            document.getElementById("loginError").classList.remove("d-none");
         }
-        return true
+
     }
-}
-function continuar() {
-    window.location.replace("home.html")
+
+
+
+
 
 }
+
+
+
+
+

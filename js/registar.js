@@ -1,3 +1,6 @@
+const data = []
+
+
 
 function validate() {
   var retVal = true;
@@ -7,11 +10,24 @@ function validate() {
   retVal4 = validateEmail();
   retVal5 = validateTelemovel();
   if (retVal1 && retVal3 && retVal4 && retVal5) {
-    location.href = "home.html";
-  }
+    const username = document.getElementById('Nome').value;
+    const password = document.getElementById('Passe').value;
+    const email = document.getElementById('Email').value;
+    const phone = document.getElementById('Telemovel').value;
+    const card = document.getElementById('card').value;
+    const address = document.getElementById('Morada').value;
+    const date = document.getElementById('datepicker').value;
+    const user = { username, password, email, phone, card, address, date };
+    const existingData = JSON.parse(localStorage.getItem('userData')) || [];
+    existingData.push(user);
+    localStorage.setItem('userData', JSON.stringify(existingData));
+    console.log(existingData)
 
 
-  return retVal1 && retVal3 && retVal4 && retVal5;
+    if (retVal1 && retVal3 && retVal4 && retVal5) {
+      location.href = "index.html";
+    };
+  };
 }
 
 function validateNome() {
@@ -67,3 +83,6 @@ function validatePasse() {
     return true
   }
 }
+
+
+

@@ -30,5 +30,7 @@ function dehighlight() {
 }
 
 function redirecionar() {
+    const preço = $('.total-cart-entrega').text()
+    localStorage.setItem('Compra', JSON.stringify(preço))
     location.href = 'checkout.html'
 }

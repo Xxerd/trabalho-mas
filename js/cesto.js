@@ -106,7 +106,11 @@ var shoppingCart = (function () {
     }
 
     obj.totalCartEntrega = function () {
-        return Number(shoppingCart.totalCart() + 0.20)
+        if (obj.totalCount() == 0) {
+            return 0;
+        } else {
+            return Number(shoppingCart.totalCart() + 0.20);
+        }
     }
 
     // List cart
