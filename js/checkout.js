@@ -1,7 +1,9 @@
 $().ready(function () {
-    var data = JSON.parse(localStorage.getItem('userLoged'));
+    const data = JSON.parse(localStorage.getItem('userLoged')) || [];
     const credit = data.map(user => user.card);
     const address = data.map(user => user.address)
+    // rest of the code
+
     $("#Card").val(credit)
     $("#morada").val(address)
     const preço = JSON.parse(localStorage.getItem('Compra'))

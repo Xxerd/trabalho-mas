@@ -1,6 +1,6 @@
-function login() {
+$("#login").click(login = () => {
     var retVal = true;
-    var data = JSON.parse(localStorage.getItem('userData'))
+    var data = JSON.parse(localStorage.getItem('userData')) || []
     var login_name = $('#Nome').val();
     var login_pass = $('#Passe').val()
     const names = data.map(user => user.username);
@@ -28,7 +28,7 @@ function login() {
 
 
 
-}
+})
 
 
 

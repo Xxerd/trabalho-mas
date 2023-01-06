@@ -1,5 +1,6 @@
 $(document).ready(function () {
-    var data = JSON.parse(localStorage.getItem('userLoged'))
+    var data = JSON.parse(localStorage.getItem('userLoged')) || [];
+    const credit = data.map(user => user.card);
     const names = data.map(user => user.username);
     const passes = data.map(user => user.password);
     const tel = data.map(user => user.phone);
