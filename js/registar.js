@@ -2,6 +2,7 @@ const data = []
 
 
 
+
 function validate() {
   var retVal = true;
   retVal1 = validateNome()
@@ -62,20 +63,23 @@ function validateEmail() {
   email = document.getElementById("Email").value;
   console.log(email)
   if (true) {
-    for (let i = 0; i < userdata.length; i++) {
+    for (let i = 0; i < existingData.length; i++) {
       if (!('@' in email) || existingData[i].Email == email) {
         if (!('@' in email)) {
           document.getElementById("EmailError").innerText('Email inválido')
           document.getElementById("EmailError").classList.remove("d-none")
+          return false
         }
         if (existingData[i].Email == email) {
           document.getElementById("EmailError").innerText('Email já em uso')
           document.getElementById("EmailError").classList.remove("d-none")
+          return false
         }
       }
       else {
         if (!document.getElementById("EmailError").classList.contains("d-none")) {
           document.getElementById("EmailError").classList.add("d-none");
+          return true
         }
 
       };

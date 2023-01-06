@@ -28,11 +28,14 @@ $().ready(function () {
         $("#entrega").css({ "background-color": "#41403F", "color": "#FFFFFF", })
         $("#take").css({ "background-color": "#FFF3E9", "color": "#000000", "border-color": "#41403F !important", "border": "1px solid", })
         $('#morada').attr("placeholder", "+ Adicionar Nova Morada")
+        $('#preço').text((preço) + '€')
     })
     $("#take").click(function () {
         $("#take").css({ "background-color": "#41403F", "color": "#FFFFFF", "border-bottom-right-radius": "0px" })
         $("#entrega").css({ "background-color": "#FFF3E9", "color": "#000000", "border-color": "#41403F !important", "border": "1px solid", })
         $('#morada').attr("placeholder", "+ Adicionar Estabelecimento")
+        console.log(preço)
+        $('#preço').text((preço - 0.20) + '€')
     })
 
     $("#pay").click(function () {
