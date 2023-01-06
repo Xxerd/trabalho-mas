@@ -15,6 +15,7 @@ $("#login").click(login = () => {
                 localStorage.setItem('userLoged', JSON.stringify(user_atual))
                 console.log('atual: ' + user_atual)
                 location.href = "home.html"
+                return true
             }
         }
 

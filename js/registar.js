@@ -1,4 +1,5 @@
 const data = []
+var existingData = ""
 
 
 
@@ -26,6 +27,7 @@ function validate() {
 
 
     if (retVal1 && retVal3 && retVal4 && retVal5) {
+      console.log('aqui')
       location.href = "index.html";
     };
   };
@@ -80,6 +82,7 @@ function validateEmail() {
     document.getElementById("EmailError").classList.add("d-none");
     return true
   };
+  return true
 }
 
 
