@@ -6,7 +6,6 @@ const data = []
 function validate() {
   var retVal = true;
   retVal1 = validateNome()
-
   retVal3 = validatePasse();
   retVal4 = validateEmail();
   retVal5 = validateTelemovel();
@@ -18,6 +17,7 @@ function validate() {
   const address = document.getElementById('Morada').value;
   const date = document.getElementById('datepicker').value;
   const existingData = JSON.parse(localStorage.getItem('userData')) || [];
+  console.log(existingData)
   if (retVal1 && retVal3 && retVal4 && retVal5) {
     const user = { username, password, email, phone, card, address, date };
     existingData.push(user);
@@ -62,31 +62,27 @@ function validateTelemovel() {
 function validateEmail() {
   email = document.getElementById("Email").value;
   console.log(email)
-  if (true) {
-    for (let i = 0; i < existingData.length; i++) {
-      if (!('@' in email) || existingData[i].Email == email) {
-        if (!('@' in email)) {
-          document.getElementById("EmailError").innerText('Email inválido')
-          document.getElementById("EmailError").classList.remove("d-none")
-          return false
-        }
-        if (existingData[i].Email == email) {
-          document.getElementById("EmailError").innerText('Email já em uso')
-          document.getElementById("EmailError").classList.remove("d-none")
-          return false
-        }
-      }
-      else {
-        if (!document.getElementById("EmailError").classList.contains("d-none")) {
-          document.getElementById("EmailError").classList.add("d-none");
-          return true
-        }
-
-      };
-    }
-
+  if (email.indexOf('@') === -1) {
+    document.getElementById("EmailError").innerHTML = '<i class="fa fa-exclamation-triangle"></i> Email invalido';
+    document.getElementById("EmailError").classList.remove("d-none");
+    return false;
   }
+
+
+  for (let i = 0; i < existingData.length; i++) {
+    if (existingData[i].Email == email) {
+      document.getElementById("EmailError").innerText('<i class="fa fa-exclamation-triangle"></i> Email já em uso')
+      document.getElementById("EmailError").classList.remove("d-none")
+      return false
+    }
+  }
+  if (!document.getElementById("EmailError").classList.contains("d-none")) {
+    document.getElementById("EmailError").classList.add("d-none");
+    return true
+  };
 }
+
+
 function validatePasse() {
   passe = document.getElementById("Passe").value;
   if (passe.length < 5) {
