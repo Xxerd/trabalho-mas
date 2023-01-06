@@ -30,6 +30,10 @@ $(document).ready(function () {
 
 
 
+
+    })
+    $('#Log-out').click(function () {
+        location.href = "index.html"
     })
 
 });

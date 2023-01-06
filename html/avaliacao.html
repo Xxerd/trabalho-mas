@@ -43,45 +43,52 @@
     </div>
     <div style="height: 100px"></div>
     <div class="container">
-        <div class="d-flex justify-content-center">
-            <img style="height: 120px; width: 180px" src="../imagens/logo.png" />
-        </div>
-        <div style="height: 30px"></div>
-        <div class="d-flex justify-content-center">
-            <a style="font-size: 25px"></a><a style="font-size: 25px" id="name"> </a><a style="font-size: 25px">
-                !</a>
-        </div>
-    </div>
-    <div style="height: 15px"></div>
-    <div class="d-flex justify-content-center">
-        <a style="font-size: 20px; color: gray;text-align:center;width:80%">O teu pedido foi confirmado e está a
-            caminho</a>
-    </div>
-    <div style="height: 40px"></div>
-    <div class="d-flex justify-content-center">
-        <a style="font-size: 15px; color: black;font-weight:400" id="tempo"></a>
-    </div>
-    <div style="height: 20px"></div>
-    <div class="d-flex justify-content-center">
-        <img style="height: 90px; width: 150px"
-            src="https://files.tecnoblog.net/wp-content/uploads/2018/08/barcode-tecnoblog-700x314.png" />
-    </div>
-    <div class="d-flex justify-content-center">
-        <a style="font-size: 10px; color: gray;font-weight:500" id="codigo"></a>
-    </div>
 
-    <div class="d-flex justify-content-center fixed-bottom" style="margin-bottom: 50px;">
-        <button type="button" class="btn btn-outline-dark" style="width: 80%;"
-            onclick="location.href='pedido_final.html';">
-            Voltar a Home
-        </button>
-    </div>
+        <div class="d-flex justify-content-center">
+            <h3 style="font-weight: 900 ;">Está satisfeito com o pedido?</h3>
+        </div>
+        <div style="height: 25px"></div>
+        <div class="d-flex justify-content-center">
+            <p style="font-size: x-small;margin-top:18px">Péssima</p>
+            <i style="font-size:45px;" id="1" onclick="avaliar(id)" class="far fa-star"></i>
+            <i style="font-size:45px;" id="2" onclick="avaliar(id)" class="far fa-star"></i>
+            <i style="font-size:45px;" id="3" onclick="avaliar(id)" class="far fa-star"></i>
+            <i style="font-size:45px;" id="4" onclick="avaliar(id)" class="far fa-star"></i>
+            <i style="font-size:45px;" id="5" onclick="avaliar(id)" class="far fa-star"></i>
+            <p style="font-size: x-small;margin-top:18px">Excelente</p>
+        </div>
+        <div class="d-flex align-items-center justify-content-center" style="margin-top:40px">
+            <p style="text-align: center;">A tua avaliação vai melhorar o nosso serviço de entregas</p>
+        </div>
+        <div class="d-flex justify-content-center">
 
+            <img style="height: auto;width:200px;" src="../imagens/noun-coffee-shop-5400535.png">
+        </div>
+        <div class="d-flex justify-content-center">
+            <h3 style="font-weight: bold;">Obrigado!</h3>
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="d-flex justify-content-center fixed-bottom" style="margin-bottom: 40px;">
+            <button type="button" class="btn" style="width: 80%; background-color: #41403F; color:white"
+                onclick="location.href='home.html';">
+                Submeter a avaliação
+            </button>
+        </div>
+
+    </div>
 </body>
 
 <script src="../lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../lib/jquery/dist/jquery.min.js"></script>
-<script src="../js/final.js"></script>
+<script src="../js/avaliacao.js"></script>
 </body>
 
 </html>

@@ -9,16 +9,16 @@ function validate() {
   retVal3 = validatePasse();
   retVal4 = validateEmail();
   retVal5 = validateTelemovel();
+  const username = document.getElementById('Nome').value;
+  const password = document.getElementById('Passe').value;
+  const email = document.getElementById('Email').value;
+  const phone = document.getElementById('Telemovel').value;
+  const card = document.getElementById('card').value;
+  const address = document.getElementById('Morada').value;
+  const date = document.getElementById('datepicker').value;
+  const existingData = JSON.parse(localStorage.getItem('userData')) || [];
   if (retVal1 && retVal3 && retVal4 && retVal5) {
-    const username = document.getElementById('Nome').value;
-    const password = document.getElementById('Passe').value;
-    const email = document.getElementById('Email').value;
-    const phone = document.getElementById('Telemovel').value;
-    const card = document.getElementById('card').value;
-    const address = document.getElementById('Morada').value;
-    const date = document.getElementById('datepicker').value;
     const user = { username, password, email, phone, card, address, date };
-    const existingData = JSON.parse(localStorage.getItem('userData')) || [];
     existingData.push(user);
     localStorage.setItem('userData', JSON.stringify(existingData));
     console.log(existingData)
@@ -61,14 +61,26 @@ function validateTelemovel() {
 function validateEmail() {
   email = document.getElementById("Email").value;
   console.log(email)
-  if (email.length < 8) {
-    document.getElementById("EmailError").classList.remove("d-none");
-    return false;
-  } else {
-    if (!document.getElementById("EmailError").classList.contains("d-none")) {
-      document.getElementById("EmailError").classList.add("d-none");
+  if (true) {
+    for (let i = 0; i < userdata.length; i++) {
+      if (!('@' in email) || existingData[i].Email == email) {
+        if (!('@' in email)) {
+          document.getElementById("EmailError").innerText('Email inválido')
+          document.getElementById("EmailError").classList.remove("d-none")
+        }
+        if (existingData[i].Email == email) {
+          document.getElementById("EmailError").innerText('Email já em uso')
+          document.getElementById("EmailError").classList.remove("d-none")
+        }
+      }
+      else {
+        if (!document.getElementById("EmailError").classList.contains("d-none")) {
+          document.getElementById("EmailError").classList.add("d-none");
+        }
+
+      };
     }
-    return true
+
   }
 }
 function validatePasse() {

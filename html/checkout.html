@@ -27,24 +27,19 @@
 </head>
 
 <body>
-  <div class="container" style="background-color: #aa7400; width: 100%">
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #aa7400">
+  <div class="container" style="background-color: #736253; width: 100%">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #736253">
       <div class="container-fluid">
         <ul class="navbar-nav d-flex flex-row">
           <li class="nav-item me-3 me-lg-0">
-            <a class="nav-link" href="home.html">
-              <i class="fas fa-coffee"></i>
+            <a class="nav-link" id="Back" href="home.html">
+              <i style="color: black;font-size: 25px;" class="fas fa-coffee"></i>
             </a>
           </li>
-          <li style="margin-top: 6px; width: 100%">
-            <a class="" style="color: black; text-decoration:none">Coffee-Break Delivery </a>
+          <li style="margin-top: 8px; width: 100%">
+            <h3 style="color:white; text-decoration:none">Coffee-Break Delivery </h3>
           </li>
 
-        </ul>
-        <ul class="navbar-nav d-flex flex-row">
-          <li class="nav-item me-3 me-lg-0" style="margin-top: px; width: 100%">
-            <a href="index.html" style="color: black; text-decoration:none">Log-out</a>
-          </li>
         </ul>
       </div>
     </nav>
@@ -54,27 +49,36 @@
   <div class="container">
     <div class="banner">
       <h1 class="titulo"><a href="home.html" style="float: left; background-color: #41403F; margin-left: 5px;"><i
-            class="fas fa-arrow-left" style="color:#FFFFFF;margin-right:0px"></i></a>Produtos</h1>
+            class="fas fa-arrow-left" style="color:#FFFFFF;margin-right:0px"></i></a>Checkout</h1>
     </div>
 
     <div class="main " style="margin-top: 20px; align-content: center;">
       <div class="d-flex justify-content-center">
+        <input type="button"
+          style="background-color: #41403F; color:#FFFFFF; border-top-right-radius: 0px;border-bottom-right-radius: 0px;"
+          class="btn" value="Entrega" id="entrega">
+        <input type="button" style="background-color:#FFF3E9; color:#000000;border-color: #41403F !important;
+        border: 1px solid; border-top-left-radius: 0px;border-bottom-left-radius: 0px;" class="btn" value="Take-away"
+          id="take">
+
+      </div>
+      <div style="margin-top: 20px;" class="d-flex justify-content-center">
         <h3>Detalhes do Pagamento</h3>
       </div>
-      <div style="height:20px"></div>
       <div class="d-flex justify-content-center">
+
         <form>
           <label for="radio1">Cartão de Débito </label>
           <input style="margin-left: 10px;margin-top:5px" type="radio" id="radio1" name="radioGroup" value="option1"
             checked>
           <br>
-          <label style="margin-left: 40px; margin-right:10px;" for="radio2">Paypal </label>
+          <label style="margin-left: 40px; margin-right:10px;" for="radio2">Dinheiro </label>
           <input style="margin-top:5px;" type="radio" id="radio2" name="radioGroup" value="option2">
         </form>
       </div>
-      <div style="height:20px"></div>
-      <div class="d-flex justify-content-center">
-        <label for="Card"><i style="margin-top: 20px;margin-right:15px;margin-left:11px"
+
+      <div class="d-flex justify-content-center" id="Cartao" style="margin-top: 20px;">
+        <label id="CardName" for="Card"><i style="margin-top: 20px;margin-right:15px;margin-left:11px"
             class="far fa-credit-card"></i></label>
         <input placeholder="+ Adicionar Novo Cartão" type="text" class="btn btn-outline-dark" id="Card" value="">
       </div>
@@ -97,16 +101,19 @@
     <div style="height:10px"></div>
     <div class="main  d-flex justify-content-center">
 
-      <button style="margin-left:7 px;" type="button" class="btn btn-white" data-bs-toggle="modal"
-        data-bs-target="#staticBackdrop" id="modaltogller">
+      <button style="margin-left:7 px;" type="button" class="btn btn-white">
         <i class="far fa-map" style="margin-right:6 px;color:black"></i>
       </button>
 
 
-      <input class="btn btn-outline-dark" type="text" id="morada" value="">
+      <input class="btn btn-outline-dark" type="text" id="morada" placeholder="+ Adicionar Nova Morada">
+
 
     </div>
   </div>
+  <div style="text-align: center; margin-top:180px" class=" text-danger col-form-label d-none " id="CartError"><i
+      class="fa fa-exclamation-triangle"></i>
+    Não tem produtos no carrinho!</div>
   <!--footer-->
   <nav class="navbar fixed-bottom bg-body-tertiary" style="background-color: #41403F; height:150px">
     <h3 style="color: #FFFFFF;margin-left:10%">Total:</h3>
@@ -116,33 +123,14 @@
 
 
 
-      <button type="button" class="btn btn-dark btn-square-md"
-        style="color: #FFFFFF;background-color: #222121;width:90%;margin-left:5%;margin-bottom:10px"
-        onclick="location.href='final.html';">Pagar</button>
+      <button type="button" class="btn btn-dark btn-square-md" id="pay"
+        style="color: #FFFFFF;background-color: #222121;width:90%;margin-left:5%;margin-bottom:10px">Pagar</button>
     </div>
   </nav>
 
 
 
-  <!-- Modal Mapa -->
-  <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body" style="height: 400px;">
-          <div id="map" style="margin: auto"></div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Understood</button>
-        </div>
-      </div>
-    </div>
-  </div>
+
 
 
 
