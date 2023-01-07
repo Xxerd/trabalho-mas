@@ -24,7 +24,7 @@ $(document).ready(function () {
         const address = document.getElementById('Morada').value;
         var existingData = JSON.parse(localStorage.getItem('userData')) || []
         const filteredData = existingData.filter(item => item.username !== names.toString())
-        console.log(filteredData)
+
         const user = { username, password, email, phone, card, address, date };
         filteredData.push(user);
         localStorage.setItem('userLoged', JSON.stringify([user]));

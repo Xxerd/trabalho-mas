@@ -20,18 +20,15 @@ function validate() {
   const date = document.getElementById('datepicker').value;
   const existingData = JSON.parse(localStorage.getItem('userData')) || [];
   retVal4 = validateEmail(existingData);
-  console.log(existingData)
+
   if (retVal1 && retVal3 && retVal4 && retVal5) {
     const user = { username, password, email, phone, card, address, date };
     existingData.push(user);
     localStorage.setItem('userData', JSON.stringify(existingData));
+    location.href = "index.html"
 
 
 
-    if (retVal1 && retVal3 && retVal4 && retVal5) {
-      console.log('aqui')
-
-    };
   };
 }
 
@@ -49,7 +46,6 @@ function validateNome() {
 }
 function validateTelemovel() {
   tel = document.getElementById("Telemovel").value;
-  console.log(tel)
   if (tel.length < 9) {
     document.getElementById("TelefoneError").classList.remove("d-none");
     return false;
@@ -65,19 +61,16 @@ function validateTelemovel() {
 
 function validateEmail(existingData) {
   email = document.getElementById("Email").value;
-  console.log(email)
+
   if (email.indexOf('@') === -1) {
     document.getElementById("EmailError").innerHTML = '<i class="fa fa-exclamation-triangle"></i> Email invalido';
     document.getElementById("EmailError").classList.remove("d-none");
     return false;
   }
 
-  console.log('aqui')
-  console.log(existingData)
-  console.log(existingData.length)
-  console.log(existingData[1].email)
+
   for (let i = 0; i < existingData.length; i++) {
-    console.log(existingData[i].email)
+
     if (existingData[i].email == email) {
       document.getElementById("EmailError").innerHTML = '<i class="fa fa-exclamation-triangle"></i> Email já em uso'
       document.getElementById("EmailError").classList.remove("d-none")
