@@ -1,3 +1,5 @@
+var existingData = ""
+
 $(document).ready(function () {
     var data = JSON.parse(localStorage.getItem('userLoged')) || [];
     const credit = data.map(user => user.card);
@@ -20,7 +22,7 @@ $(document).ready(function () {
         const phone = document.getElementById('Telemovel').value;
         const card = document.getElementById('card').value;
         const address = document.getElementById('Morada').value;
-        const existingData = JSON.parse(localStorage.getItem('userData')) || []
+        var existingData = JSON.parse(localStorage.getItem('userData')) || []
         const filteredData = existingData.filter(item => item.username !== names.toString())
         console.log(filteredData)
         const user = { username, password, email, phone, card, address, date };

@@ -1,5 +1,6 @@
 const data = []
-var existingData = ""
+
+
 
 
 
@@ -8,7 +9,7 @@ function validate() {
   var retVal = true;
   retVal1 = validateNome()
   retVal3 = validatePasse();
-  retVal4 = validateEmail();
+
   retVal5 = validateTelemovel();
   const username = document.getElementById('Nome').value;
   const password = document.getElementById('Passe').value;
@@ -18,17 +19,18 @@ function validate() {
   const address = document.getElementById('Morada').value;
   const date = document.getElementById('datepicker').value;
   const existingData = JSON.parse(localStorage.getItem('userData')) || [];
+  retVal4 = validateEmail(existingData);
   console.log(existingData)
   if (retVal1 && retVal3 && retVal4 && retVal5) {
     const user = { username, password, email, phone, card, address, date };
     existingData.push(user);
     localStorage.setItem('userData', JSON.stringify(existingData));
-    console.log(existingData)
+
 
 
     if (retVal1 && retVal3 && retVal4 && retVal5) {
       console.log('aqui')
-      location.href = "index.html";
+
     };
   };
 }
@@ -61,7 +63,7 @@ function validateTelemovel() {
 
 
 
-function validateEmail() {
+function validateEmail(existingData) {
   email = document.getElementById("Email").value;
   console.log(email)
   if (email.indexOf('@') === -1) {
@@ -70,10 +72,14 @@ function validateEmail() {
     return false;
   }
 
-
+  console.log('aqui')
+  console.log(existingData)
+  console.log(existingData.length)
+  console.log(existingData[1].email)
   for (let i = 0; i < existingData.length; i++) {
-    if (existingData[i].Email == email) {
-      document.getElementById("EmailError").innerText('<i class="fa fa-exclamation-triangle"></i> Email já em uso')
+    console.log(existingData[i].email)
+    if (existingData[i].email == email) {
+      document.getElementById("EmailError").innerHTML = '<i class="fa fa-exclamation-triangle"></i> Email já em uso'
       document.getElementById("EmailError").classList.remove("d-none")
       return false
     }
