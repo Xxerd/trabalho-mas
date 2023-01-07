@@ -25,7 +25,7 @@ function validate() {
     const user = { username, password, email, phone, card, address, date };
     existingData.push(user);
     localStorage.setItem('userData', JSON.stringify(existingData));
-
+    location.href = "index.html"
 
 
     if (retVal1 && retVal3 && retVal4 && retVal5) {

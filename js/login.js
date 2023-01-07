@@ -12,7 +12,7 @@ $("#login").click(login = () => {
         if (login_name === names[i]) {
             if (login_pass === passes[i]) {
                 const user_atual = data.filter(user => user.username === login_name && user.password === login_pass);
-                localStorage.setItem('userLoged', JSON.stringify(user_atual))
+                localStorage.setItem('userLoged', JSON.stringify(user_atual[0]))
                 console.log('atual: ' + user_atual)
                 location.href = "home.html"
                 return true
