@@ -37,7 +37,9 @@ $().ready(function () {
         $("#entrega").css({ "background-color": "#FFF3E9", "color": "#000000", "border-color": "#41403F !important", "border": "1px solid", })
         $('#morada').attr("placeholder", "+ Adicionar Estabelecimento")
         console.log(preço)
-        if (preço !== 0) { $('#preço').text((preço - 0.20) + '€') }
+        if (preço != 0) {
+            $('#preço').text((preço - 0.20) + '€')
+        }
 
     })
 
