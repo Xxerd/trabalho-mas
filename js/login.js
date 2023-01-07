@@ -5,15 +5,13 @@ $("#login").click(login = () => {
     var login_pass = $('#Passe').val()
     const names = data.map(user => user.username);
     const passes = data.map(user => user.password)
-    console.log(names)
-    console.log(passes)
-    console.log()
+
     for (let i = 0; i <= names.length; i++) {
         if (login_name === names[i]) {
             if (login_pass === passes[i]) {
                 const user_atual = data.filter(user => user.username === login_name && user.password === login_pass);
-                localStorage.setItem('userLoged', JSON.stringify(user_atual[0]))
-                console.log('atual: ' + user_atual)
+                localStorage.setItem('userLoged', JSON.stringify([user_atual[0]]))
+
                 location.href = "home.html"
                 return true
             }

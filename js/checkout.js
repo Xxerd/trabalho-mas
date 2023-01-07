@@ -36,7 +36,7 @@ $().ready(function () {
         $("#take").css({ "background-color": "#41403F", "color": "#FFFFFF", "border-bottom-right-radius": "0px" })
         $("#entrega").css({ "background-color": "#FFF3E9", "color": "#000000", "border-color": "#41403F !important", "border": "1px solid", })
         $('#morada').attr("placeholder", "+ Adicionar Estabelecimento")
-        console.log(preço)
+
         if (preço != 0) {
             $('#preço').text((preço - 0.20) + '€')
         }
@@ -46,7 +46,7 @@ $().ready(function () {
     $("#pay").click(function () {
 
         if (preço == 0) {
-            console.log(preço)
+
 
             $("#CartError").removeClass("d-none")
         }
